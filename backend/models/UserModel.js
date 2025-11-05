@@ -45,7 +45,7 @@ const userschema=new mongoose.Schema({
 
 userschema.pre("save",async function(next){
     if(this.isModified("password")){
-        this.password=await bcrypt.hash(this.password,9);
+        this.password=await bcrypt.hash(this.password,12);
     }
     next();
 });
@@ -60,7 +60,6 @@ userschema.methods.generateaccesstoken=function(){
         {
             _id:this._id,
             email:this.email,
-            username:this.username,
             fullname:this.fullname
         },
         process.env.ACCESS_TOKEN_SECRET,

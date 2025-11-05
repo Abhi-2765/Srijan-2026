@@ -1,5 +1,6 @@
 import express from "express";
 import { verifyJWT } from "../middleware/verifyAuthentication.js";
+import { isAdmin } from "../middleware/adminMiddleware.js";
 import {
     createEvent,
     updateEvent,
@@ -37,13 +38,13 @@ eventrouter.route("/:id/register").post(verifyJWT, registerForEvent);
 // =================================
 // (Assuming only authenticated users can manage events for now)
 // Create a new event
-eventrouter.route("/create").post(verifyJWT, createEvent);
+eventrouter.route("/create").post(isAdmin, createEvent);
 
 // Update an event
-eventrouter.route("/:id").put(verifyJWT, updateEvent);
+eventrouter.route("/:id").put(isAdmin, updateEvent);
 
 // Delete an event
-eventrouter.route("/:id").delete(verifyJWT, deleteEvent);
+eventrouter.route("/:id").delete(isAdmin, deleteEvent);
 
 
 export default eventrouter;

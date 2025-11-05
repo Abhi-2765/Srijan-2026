@@ -33,12 +33,22 @@ const registeruser = asynchandler(async (req, res, next) => {
     throw new ApiError(400, "All fields are required");
   }
 
-  if(!ism_member){
+  if(ism_member==null){
     throw new ApiError(400, "ISM Member or not is required field");
   }
 
+  if(ism_member==true){
+    const ismEmailPattern = /^[a-zA-Z0-9._%+-]+@iitism\.ac\.in$/;
+    if (!ismEmailPattern.test(email)) {
+      throw new ApiError(400, "For ISM members, please use your institutional email (@iitism.ac.in)");
+    }
+  }
   if (password.length < 8) {
     throw new ApiError(400, "Password must be at least 8 characters long");
+  }
+
+  if(mobilenumber.length!=10 || !/^\d{10}$/.test(mobilenumber)){
+    throw new ApiError(400, "Mobile number must be valid a 10 digit number");
   }
 
   if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
