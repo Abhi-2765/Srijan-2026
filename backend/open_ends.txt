@@ -1,30 +1,153 @@
-Things to do:-
+🧾 Merchandise & Order Management — Implementation Plan
+🧩 1. Merchandise Schema (merch.model.js)
 
-Handle merchendise part
+Fields:
 
-merch schema-
-    type- enum(hoodie/tshirt/hoodie+tshirt)
-    price- based on type(399/799/1099)
+type: {
+  type: String,
+  enum: ["hoodie", "tshirt", "hoodie+tshirt"],
+  required: true
+},
+price: {
+  type: Number,
+  required: true,
+  enum: [399, 799, 1099] // Corresponding to type
+}
 
-order schema-
-    type ordered
-    quantity
-    size
-    total price
-    status(on way/delivered)
 
-To do a change in user schema-
-    Create new field-
-    order- [moongose.Schema.Objectid] of ref= order
+Logic:
 
-apis-
-create order-
-Take input to create order and update the order field of current user
+Price can be auto-set based on the selected type before saving.
 
-status-
-shows the order details and status
+📦 2. Order Schema (order.model.js)
 
-change status(only for admin)-
-change status from on way to delivered
+Fields:
 
-For payment integrate razorpay(just leave the option to integrate razorpay/visa)
+type: {
+  type: String,
+  enum: ["hoodie", "tshirt", "hoodie+tshirt"],
+  required: true
+},
+quantity: {
+  type: Number,
+  required: true,
+  min: 1
+},
+size: {
+  type: String,
+  enum: ["S", "M", "L", "XL", "XXL"],
+  required: true
+},
+totalPrice: {
+  type: Number,
+  required: true
+},
+status: {
+  type: String,
+  enum: ["on way", "delivered"],
+  default: "on way"
+},
+user: {
+  type: mongoose.Schema.Types.ObjectId,
+  ref: "User",
+  required: true
+}
+
+
+Logic:
+
+totalPrice = quantity × merch.price
+
+Automatically associate user during order creation.
+
+👤 3. Update User Schema (user.model.js)
+
+Add new field:
+
+orders: [
+  {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Order"
+  }
+]
+
+⚙️ 4. API Endpoints
+➕ Create Order — POST /api/orders
+
+Functionality:
+
+Takes input: { type, quantity, size }
+
+Fetches price from merchandise type.
+
+Calculates total price.
+
+Creates new order document.
+
+Adds order _id to the user’s orders array.
+
+Example Request Body:
+
+{
+  "type": "hoodie",
+  "quantity": 2,
+  "size": "L"
+}
+
+
+Flow:
+
+Validate merchandise type.
+
+Calculate total price.
+
+Create order.
+
+Push order ID into user.orders.
+
+(Future) Initiate payment with Razorpay or Visa.
+
+📋 Get Order Status — GET /api/orders/status
+
+Functionality:
+
+Returns all orders of the logged-in user with current status.
+
+Response Example:
+
+[
+  {
+    "type": "tshirt",
+    "quantity": 1,
+    "size": "M",
+    "totalPrice": 799,
+    "status": "on way"
+  }
+]
+
+🔄 Change Order Status (Admin Only) — PATCH /api/orders/:id/status
+
+Functionality:
+
+Allows only admins to change status from "on way" → "delivered".
+
+Example Request Body:
+
+{
+  "status": "delivered"
+}
+
+💳 5. Payment Integration (Future Step)
+
+Placeholder:
+
+Integrate Razorpay / Visa later.
+
+Add payment status fields in order schema:
+
+paymentId: String,
+paymentStatus: {
+  type: String,
+  enum: ["pending", "paid"],
+  default: "pending"
+}
