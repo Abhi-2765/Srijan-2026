@@ -33,7 +33,6 @@ app.use(rateLimit({
   app.use(express.urlencoded({extended:true , limit: "16kb"}));
   app.use(cookieParser());
   
-  app.use(errorHandler);
   
   // Routes
   app.get('/', (req, res) => {
@@ -42,7 +41,9 @@ app.use(rateLimit({
   
   app.use("/api/v1/user",userrouter);
   app.use("/api/v1/event", eventrouter);
-    
+  
+  app.use(errorHandler);
+  
   app.use((req, res) => {
     res.status(404).json({ message: "Not Found" });
   });
