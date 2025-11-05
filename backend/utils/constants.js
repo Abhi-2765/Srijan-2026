@@ -8,3 +8,5 @@ const EVENT_CATEGORIES = [
     'Comedy', 
     'Cinema'
 ]
+
+export  { EVENT_CATEGORIES};
