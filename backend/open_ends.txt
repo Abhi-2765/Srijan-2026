@@ -1,0 +1,30 @@
+Things to do:-
+
+Handle merchendise part
+
+merch schema-
+    type- enum(hoodie/tshirt/hoodie+tshirt)
+    price- based on type(399/799/1099)
+
+order schema-
+    type ordered
+    quantity
+    size
+    total price
+    status(on way/delivered)
+
+To do a change in user schema-
+    Create new field-
+    order- [moongose.Schema.Objectid] of ref= order
+
+apis-
+create order-
+Take input to create order and update the order field of current user
+
+status-
+shows the order details and status
+
+change status(only for admin)-
+change status from on way to delivered
+
+For payment integrate razorpay(just leave the option to integrate razorpay/visa)
