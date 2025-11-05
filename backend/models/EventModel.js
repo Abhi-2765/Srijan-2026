@@ -1,0 +1,70 @@
+import mongoose from "mongoose";
+
+const eventSchema = new mongoose.Schema(
+  {
+    eventname: {
+      type: String,
+      required: [true, "Event name is required"],
+      unique: true,
+      trim: true
+    },
+
+    venue: {
+      type: String,
+      required: [true, "Venue is required"],
+      trim: true
+    },
+
+    description: {
+      type: String,
+      required: [true, "Description is required"],
+      trim: true,
+    },
+
+    bg_image_url: {
+      type: String,
+      trim: true
+    },
+
+    rulebook: {
+      type: String,
+      trim: true
+    },
+
+    rules: {
+      type: [String],
+      default: []
+    },
+
+    coordinator_names: {
+      type: [String],
+      default: [],
+      validate: {
+        validator: (arr) => arr.every((n) => n.trim().length > 0),
+        message: "Coordinator names must be non-empty strings",
+      },
+    },
+
+    coordinator_phone: {
+      type: [String],
+      default: [],
+      validate: {
+        validator: (arr) =>
+          arr.every((p) => /^[0-9]{10}$/.test(p)),
+        message: "Each phone number must be a valid 10-digit number",
+      },
+    },
+    users: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        default: [],
+      },
+    ],
+  },
+  {
+    timestamps: true,
+  }
+);
+
+export const Event = mongoose.model("Event", eventSchema);
