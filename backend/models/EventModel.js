@@ -2,13 +2,16 @@ import mongoose from "mongoose";
 
 const eventSchema = new mongoose.Schema(
   {
-    eventname: {
+    event_name: {
       type: String,
       required: [true, "Event name is required"],
       unique: true,
       trim: true
     },
-
+    event_category: {
+      type: String,
+      required: [true, "Event category is required"],
+    },
     venue: {
       type: String,
       required: [true, "Venue is required"],
