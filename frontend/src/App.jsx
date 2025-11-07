@@ -1,9 +1,10 @@
+
+import GalleryPage from './pages/Gallery.jsx';
+
 function App() {
   return (
     <>
-      <h1 class="text-3xl font-bold underline">
-        Hello Srijan 2026!
-      </h1>
+      <GalleryPage />
     </>
   );
 }

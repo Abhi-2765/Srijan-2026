@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+/* marquee animation for infinite left-scrolling gallery */
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+.animate-marquee {
+	/* ensure the inner track is wide enough (we duplicate content in JS) */
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	will-change: transform;
+	/* control duration with a CSS variable */
+	--marquee-duration: 20s;
+	animation: marquee var(--marquee-duration) linear infinite;
+}
+
+/* pause on hover for better UX */
+.animate-marquee:hover {
+	animation-play-state: paused;
+}
+
+/* reverse marquee: same animation but plays in reverse direction (moves right) */
+.animate-marquee-reverse {
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+	will-change: transform;
+	--marquee-duration: 20s;
+	animation: marquee var(--marquee-duration) linear infinite reverse;
+}
+
+.animate-marquee-reverse:hover {
+	animation-play-state: paused;
+}
