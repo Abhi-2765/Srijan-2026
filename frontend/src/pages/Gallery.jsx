@@ -137,7 +137,7 @@ const GalleryPage = () => {
       {/* subtle overlay so text and tracks remain readable */}
       <div className="absolute inset-0 bg-black/30 pointer-events-none" />
       {/* heading image */}
-      <div className="flex justify-center mb-4 relative">
+      <div className="flex justify-center mb-10 relative">
         <img
           src={new URL('../data/GalleryText.png', import.meta.url).href}
           alt="Gallery"
@@ -160,11 +160,11 @@ const GalleryPage = () => {
             ]
             const shape = shapeVariants[idx % shapeVariants.length]
             return (
-              <div key={`${item.id}-${idx}`} className="min-w-[260px] mx-3 flex-shrink-0" aria-hidden={idx >= gallery.length}>
-                <div className={`p-1 bg-transparent border-4 border-yellow-400 ${shape} overflow-hidden shadow-lg`}>
-                  <img src={item.src} alt={item.title} className={`w-full h-48 object-cover`} />
+              <div key={`${item.id}-${idx}`} className="mx-3 mt-4 flex-shrink-0" aria-hidden={idx >= gallery.length}>
+                <div className={``}>
+                  <img src={item.src} alt={item.title} className={`w-full h-40 object-cover`} />
                 </div>
-                <p className="text-sm mt-2 text-center text-white">{item.title}</p>
+                {/* <p className="text-sm mt-2 text-center text-white">{item.title}</p> */}
               </div>
             )
           })}
@@ -186,11 +186,11 @@ const GalleryPage = () => {
             ]
             const shape = shapeVariants[idx % shapeVariants.length]
             return (
-              <div key={`${item.id}-${idx}`} className="min-w-[260px] mx-3 flex-shrink-0" aria-hidden={idx >= gallery2.length}>
-                <div className={`p-1 bg-transparent border-4 border-yellow-400 ${shape} overflow-hidden shadow-lg`}>
-                  <img src={item.src} alt={item.title} className={`w-full h-48 object-cover`} />
+              <div key={`${item.id}-${idx}`} className=" mx-3 flex-shrink-0" aria-hidden={idx >= gallery2.length}>
+                <div className={''}>
+                  <img src={item.src} alt={item.title} className={`w-full h-40 object-cover`} />
                 </div>
-                <p className="text-sm mt-2 text-center text-white">{item.title}</p>
+                {/* <p className="text-sm mt-2 text-center text-white">{item.title}</p> */}
               </div>
             )
           })}
