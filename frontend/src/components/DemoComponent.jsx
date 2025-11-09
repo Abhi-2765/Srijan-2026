@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const DemoComponent = () => {
-    return (
-        <div>DemoComponent</div>
-    )
-}
+  return <h2>Coming Soon</h2>;
+};
 
-export default DemoComponent
+export default DemoComponent;
