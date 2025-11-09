@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import './CountdownTimer.css';
+import React, { useState, useEffect } from "react";
+import "./CountdownTimer.css";
 
 const CountdownTimer = ({ targetDate }) => {
   const calculateTimeLeft = () => {
@@ -39,9 +39,7 @@ const CountdownTimer = ({ targetDate }) => {
     <div className="countdown-container">
       {Object.keys(timeLeft).map((interval) => (
         <div className="time-box" key={interval}>
-          <div className="time-value">
-            {addLeadingZero(timeLeft[interval])}
-          </div>
+          <div className="time-value">{addLeadingZero(timeLeft[interval])}</div>
           <div className="time-label">{interval}</div>
         </div>
       ))}

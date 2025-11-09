@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
-import GalleryPage from "/pages/Gallery";
+import GalleryPage from "./pages/Gallery";
 
 function App() {
   return (
