@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/HomePage.jsx";
 //import Gallery from "./pages/Gallery.jsx";
 import Events from "./pages/EventPage/EventPage";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from './components/Navbar.jsx';
 //import Sponsors from "./pages/Sponsors.jsx";
 //import Merchandise from "./pages/Merchandise.jsx";
 //import Team from "./pages/Team/Team";
@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar.jsx";
 export default function App() {
   return (
     <>
+    <Navbar />
   {/* visible everywhere */}
       <Routes>
         <Route path="/" element={<Events />} />
