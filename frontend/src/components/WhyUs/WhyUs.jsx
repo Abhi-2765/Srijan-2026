@@ -19,18 +19,18 @@ export default function WhyUsPage() {
     {
       img: icon2,
       title1: "50K+",
-      title2: "FOOTFALL",
+      title2: "FOOTWALL",
       desc: "Massive participation from across the country – from students, artists, and cultural enthusiasts.",
     },
     {
       img: icon3,
-      title1: "100K+",
+      title1: "100+",
       title2: "EVENTS",
       desc: "A diverse range of cultural, literary, fine-arts, and performing arts competitions and showcases.",
     },
     {
       img: icon4,
-      title1: "200K+",
+      title1: "200+",
       title2: "INSTITUTES REPRESENTED",
       desc: "Students and performers from over 200 institutions nationwide contribute to Srijan’s vibrant energy.",
     },

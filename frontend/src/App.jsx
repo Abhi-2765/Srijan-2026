@@ -8,6 +8,7 @@ import GalleryPage from "./pages/Gallery";
 import AdminPage from "./pages/AdminPage";
 import DemoComponent from "./components/DemoComponent";
 import WhyUsPage from "./components/WhyUs/WhyUs";
+import AboutUsPage from "./components/AboutUs/AboutUs";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/events" element={<EventPage />} />
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/why-us" element={<WhyUsPage />} />
+        <Route path="/about-us" element={<AboutUsPage />} />
         <Route path="/team" element={<DemoComponent />} />
         <Route path="/merchandies" element={<DemoComponent />} />
         <Route path="/sponsers" element={<DemoComponent />} />
