@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+
+/* 🌟 Sponsors Section */
+.sponsers-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at center, #802C00, #5F0F10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  color: #EEC403;
+  padding-bottom: 80px;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+/* 🔹 Title */
+.sponsers-title {
+  font-size: 64px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+
+/* 🔹 Overall grid of rows */
+.sponsers-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   /* balanced gap between all rows */
+}
+
+/* 🔹 Each row of logos */
+.sponsers-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* space between logos in the same row */
+}
+
+/* 🔹 Offset rows (2nd and 4th) to create staggered honeycomb layout */
+.sponsers-row.offset {
+  margin-top: 30px;       /* slight overlap upwards */
+  margin-bottom: 30px;  
+    /* adds breathing room below */
+   /* small downward nudge for symmetry */
+}
+
+/* 🔹 Individual sponsor logo circle */
+.sponser-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* 🔹 Logo images inside the frames */
+.sponser-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* 🌐 Responsive adjustments */
+@media (max-width: 1024px) {
+  .sponser-logo {
+    width: 120px;
+    height: 120px;
+  }
+  .sponsers-title {
+    font-size: 48px;
+  }
+  .sponsers-grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponser-logo {
+    width: 100px;
+    height: 100px;
+  }
+  .sponsers-title {
+    font-size: 36px;
+  }
+  .sponsers-row {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponser-logo {
+    width: 80px;
+    height: 80px;
+  }
+  .sponsers-title {
+    font-size: 28px;
+  }
+  .sponsers-grid {
+    gap: 30px;
+  }
+}

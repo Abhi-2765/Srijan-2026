@@ -7,7 +7,7 @@ import EventPage from "./pages/EventPage/EventPage";
 import GalleryPage from "./pages/Gallery";
 import AdminPage from "./pages/AdminPage";
 import DemoComponent from "./components/DemoComponent";
-
+import Sponsers from "./pages/sponserPage/sponsers.jsx";
 function App() {
   return (
     <div className="App">
@@ -19,9 +19,10 @@ function App() {
         <Route path="/gallery" element={<GalleryPage />} />
         <Route path="/team" element={<DemoComponent />} />
         <Route path="/merchandies" element={<DemoComponent />} />
-        <Route path="/sponsers" element={<DemoComponent />} />
+        
         <Route path="/register" element={<DemoComponent />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path="/sponsers" element={<Sponsers />} />
       </Routes>
     </div>
   );
