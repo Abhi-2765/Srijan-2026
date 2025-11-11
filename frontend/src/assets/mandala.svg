@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="515" height="515" viewBox="0 0 515 515" fill="none">
+<circle cx="257.052" cy="257.408" r="142.321" fill="none" stroke="#FED000" stroke-width="2.76351"/>
+<circle cx="257.052" cy="257.408" r="124.358" fill="none" stroke="#FED000" stroke-width="2.76351"/>
+<g id="Repeat group 16_inner" data-figma-trr="r8p309.51-0f">
+<path d="M192.041 129.875C188.001 120.135 192.458 102.025 192.458 102.025C192.458 102.025 208.592 111.592 212.632 121.331" stroke="#FED000" stroke-width="2.76351"/>
+</g>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(256.741 -106.345) rotate(45)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(513.481 1.30921e-05) rotate(90)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(619.827 256.741) rotate(135)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(513.481 513.481) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(256.741 619.827) rotate(-135)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(-4.93121e-06 513.481) rotate(-90)"/>
+<use xlink:href="#Repeat%20group%2016_inner" transform="translate(-106.345 256.74) rotate(-45)"/>
+<g id="Repeat group 15_inner" data-figma-trr="r8p371.69-0f">
+<path d="M256.993 10.0462C252.749 33.4784 176.217 54.2906 187.277 133.051C187.277 133.051 220.363 113.995 256.993 113.995C293.623 113.995 327.524 133.051 327.524 133.051C338.579 59.8177 261.237 33.4784 256.993 10.0462Z" fill="none" style="mix-blend-mode:multiply"/>
+<path d="M185.909 133.243C186.821 133.115 187.734 132.987 188.646 132.858C187.618 125.537 187.283 118.216 187.824 110.946C189.138 89.3959 199.849 69.3205 215.087 54.0747C228.436 38.7007 249.37 30.9398 258.353 10.2925H255.633C266.851 34.0794 291.261 43.9946 305.802 63.4898C322.185 82.3929 330.435 108.079 326.158 132.844L328.202 131.846C306.187 120.455 281.981 112.823 256.993 112.613C239.825 112.647 222.947 116.593 207.006 122.568C200.021 125.218 193.171 128.222 186.588 131.853C187.048 132.651 187.507 133.45 187.967 134.248C194.29 130.76 201.124 127.752 207.981 125.154C223.677 119.268 240.27 115.406 256.993 115.377C281.306 115.555 305.351 123.122 326.847 134.255C327.781 134.78 328.731 134.316 328.891 133.257C333.328 107.822 324.69 80.9954 307.929 61.7252C293.192 42.2327 267.976 30.5288 258.353 9.79995C258.068 8.22851 255.918 8.22851 255.633 9.79995C248.187 27.4328 226.618 36.8676 213.107 52.1469C197.569 67.6622 186.402 88.5217 185.068 110.741C184.51 118.233 184.858 125.752 185.909 133.243ZM188.646 132.858L185.909 133.243C186.06 134.319 187.025 134.791 187.967 134.248L186.588 131.853L188.646 132.858Z" fill="#FED000"/>
+<rect x="256.744" y="26.2509" width="13.8175" height="13.8175" transform="rotate(45 256.744 26.2509)" fill="none" stroke="#FED000" stroke-width="1.38175"/>
+</g>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(257.394 -106.617) rotate(45)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(514.789 -0.00112612) rotate(90)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(621.406 257.393) rotate(135)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(514.79 514.788) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(257.396 621.405) rotate(-135)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(0.0011343 514.789) rotate(-90)"/>
+<use xlink:href="#Repeat%20group%2015_inner" transform="translate(-106.616 257.395) rotate(-45)"/>
+<g id="Repeat group 13_inner" data-figma-trr="r8p138.18-0f">
+<path d="M272.265 203.438C272.265 224.805 257.065 242.127 257.065 242.127C257.065 242.127 241.866 224.805 241.866 203.438C241.866 182.07 257.065 164.749 257.065 164.749C257.065 164.749 272.265 182.07 272.265 203.438Z" fill="none"/>
+<path d="M273.647 203.438C272.725 203.438 271.804 203.438 270.883 203.438C271.068 206.176 270.974 208.952 270.633 211.711C269.219 222.761 264.165 233.405 257.065 242.127C257.065 242.127 257.065 242.127 257.065 242.127C248.241 231.211 242.603 217.205 243.248 203.438C244.01 189.707 250.837 176.898 259.143 166.571C259.143 166.571 259.143 166.571 259.143 166.571H254.988C261.664 174.793 267.137 184.773 269.653 195.339C270.275 197.993 270.699 200.7 270.883 203.438C271.804 203.438 272.725 203.438 273.647 203.438C273.831 200.526 273.721 197.587 273.354 194.681C271.797 183.003 266.657 172.169 259.143 162.926L257.065 160.559L254.988 162.926C254.988 162.926 254.988 162.926 254.988 162.926C245.7 174.439 239.892 188.744 240.484 203.438C241.3 218.095 248.295 231.202 257.065 242.127C257.065 242.127 257.065 242.127 257.065 242.127C264.156 233.383 269.715 223.213 272.374 212.021C273.022 209.219 273.462 206.349 273.647 203.438ZM270.883 203.438H273.647H270.883Z" fill="#FED000"/>
+<path d="M281.972 197.909C281.972 163.569 261.246 158.528 257.101 135.73C255.028 158.528 232.229 163.569 232.229 197.909" stroke="#FED000" stroke-width="2.76351" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(257.748 -106.226) rotate(45)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(515.117 0.915551) rotate(90)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(621.343 258.663) rotate(135)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(514.201 516.032) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(256.453 622.259) rotate(-135)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(-0.915542 515.117) rotate(-90)"/>
+<use xlink:href="#Repeat%20group%2013_inner" transform="translate(-107.142 257.369) rotate(-45)"/>
+<g id="Repeat group 14_inner" data-figma-trr="r8p344.06-0f">
+<path d="M295.679 119.203C295.679 82.5735 259.753 68.0785 256.99 52.8792C254.226 68.0785 218.301 82.5735 218.301 119.203" stroke="#FED000" stroke-width="2.76351" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M281.862 116.468C281.862 96.6271 258.767 88.7756 256.99 80.5427C255.213 88.7756 232.118 96.6271 232.118 116.468" stroke="#FED000" stroke-width="2.76351" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M257.007 113.995C253.092 104.323 245.735 84.9781 257.008 84.9767C267.369 84.9753 262.304 102.48 257.007 113.995Z" fill="none" stroke="#FED000" stroke-width="2.76351" stroke-linejoin="round"/>
+<path d="M259.245 114.021C260.984 106.522 264.746 91.7236 271.552 96.5034C277.808 100.896 267.326 109.316 259.245 114.021Z" fill="none" stroke="#FED000" stroke-width="2.76351" stroke-linejoin="round"/>
+<path d="M256.695 114.188C254.051 106.958 248.504 92.7319 242.335 98.3096C236.665 103.436 248.099 110.508 256.695 114.188Z" fill="none" stroke="#FED000" stroke-width="2.76351" stroke-linejoin="round"/>
+<path d="M261.128 113.315C266.527 108.913 277.417 100.428 279.59 108.063C281.587 115.079 269.475 114.818 261.128 113.315Z" fill="none" stroke="#FED000" stroke-width="2.76351" stroke-linejoin="round"/>
+<path d="M253.138 113.315C247.739 108.913 236.849 100.428 234.676 108.063C232.679 115.079 244.791 114.818 253.138 113.315Z" fill="none" stroke="#FED000" stroke-width="2.76351" stroke-linejoin="round"/>
+<path d="M232.135 114.686L218.317 113.304" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M281.322 114.686L295.139 113.304" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M231.999 109.932L219.834 107.004" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M281.458 109.932L293.623 107.004" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M233.83 105.373L222.128 100.944" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M279.626 105.373L291.329 100.944" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M236.216 101.078L225.161 95.2184" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M277.24 101.078L288.295 95.2184" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M239.12 97.1177L228.041 89.4552" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M274.337 97.1177L285.416 89.4552" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M243.443 94.2388L231.684 83.9957" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M270.014 94.2388L281.772 83.9957" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M246.366 90.6706L235.983 79.0354" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M267.09 90.6706L277.473 79.0354" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M249.714 87.4967L240.87 74.6526" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M263.742 87.4967L272.586 74.6526" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M253.433 84.769L245.161 69.1783" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M260.023 84.769L268.295 69.1783" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M256.583 80.6626L250.329 64.1586" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M256.873 80.6626L263.127 64.1586" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+<path d="M256.975 82.6046L256.704 56.8423" stroke="#FED000" stroke-width="2.07263" stroke-linejoin="round"/>
+</g>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(257.753 -106.133) rotate(45)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(515.059 1.0795) rotate(90)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(621.192 258.833) rotate(135)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(513.98 516.139) rotate(-180)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(256.227 622.271) rotate(-135)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(-1.07949 515.059) rotate(-90)"/>
+<use xlink:href="#Repeat%20group%2014_inner" transform="translate(-107.212 257.306) rotate(-45)"/>
+<circle cx="257.052" cy="257.408" r="13.8175" fill="none" stroke="#FED000" stroke-width="2.76351"/>
+</svg>

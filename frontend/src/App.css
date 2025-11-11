@@ -4,7 +4,8 @@ body {
   
   background-color: #5a0a0a; 
 
-  background-image: url('./assets/hero-bg.jpg.png');
+background-image: url('/src/assets/hero-bg.png');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

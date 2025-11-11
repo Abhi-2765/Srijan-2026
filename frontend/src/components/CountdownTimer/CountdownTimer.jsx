@@ -26,22 +26,16 @@ const CountdownTimer = ({ targetDate }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // Clear the timer when the component unmounts
     return () => clearTimeout(timer);
-  });
+  }, [targetDate]);
 
-  // Helper function to add leading zero
-  const addLeadingZero = (value) => {
-    return value < 10 ? `0${value}` : value;
-  };
+  const addLeadingZero = (value) => (value < 10 ? `0${value}` : value);
 
   return (
     <div className="countdown-container">
       {Object.keys(timeLeft).map((interval) => (
         <div className="time-box" key={interval}>
-          <div className="time-value">
-            {addLeadingZero(timeLeft[interval])}
-          </div>
+          <div className="time-value">{addLeadingZero(timeLeft[interval])}</div>
           <div className="time-label">{interval}</div>
         </div>
       ))}
