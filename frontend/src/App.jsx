@@ -7,6 +7,7 @@ import EventPage from "./pages/EventPage/EventPage";
 import GalleryPage from "./pages/Gallery";
 import AdminPage from "./pages/AdminPage";
 import DemoComponent from "./components/DemoComponent";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" element={<DemoComponent />} />
         <Route path="/admin" element={<AdminPage />} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+
+.Footer-links {
+  font-family: 'Pirata One', cursive;
+  font-size: 30px;
+  color: white;
+  margin: 0 0 30px 0;
+  font-weight: 300;
+}
+
+.pirata-one-regular {
+    font-family: "Pirata One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size:30px;
+}
+
