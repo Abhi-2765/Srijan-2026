@@ -1,203 +1,138 @@
-import React, { useEffect, useRef } from 'react'
-import { gallery, gallery2 } from '../data/galleryData'
+import React, { useState } from "react";
 
-const GalleryPage = () => {
-  // duplicate the list so the marquee can scroll seamlessly
-  const items = [...gallery, ...gallery]
-  // for the opposite-direction track we reverse the base order then duplicate it
-  const base2 = [...gallery2].slice().reverse()
-  const items2 = [...base2, ...base2]
+const IMAGE_COUNT = 35;
 
-  const track1Ref = useRef(null)
-  const track2Ref = useRef(null)
-  const rafRef = useRef(null)
-  const lastTimeRef = useRef(null)
-  const pos1 = useRef(0)
-  const pos2 = useRef(0)
-  const width1 = useRef(0)
-  const width2 = useRef(0)
-  const paused1 = useRef(false)
-  const paused2 = useRef(false)
-  const keyState = useRef({ left: false, right: false })
+// for default images, to be removed when actual images are to be set
+const IDS = [1011, 1025, 103, 1043, 1052, 106, 1074, 1084, 109, 110, 111, 112, 113, 114];
 
-  // pixels per second (base)
-  const speed1 = 120
-  const speed2 = 80
-  // boost applied while arrow key is pressed (pixels/sec)
-  const boost = 300
+const LAYOUT = [
+  { c: 1, r: 2, ar: "4:3" },    { c: 1, r: 2, ar: "3:4" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "4:3" },    { c: 1, r: 2, ar: "3:4" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "4:3" },    { c: 1, r: 2, ar: "3:4" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "4:3" },    { c: 1, r: 1, ar: "3:4" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 2, r: 1, ar: "4:3" },    { c: 1, r: 2, ar: "3:4" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "3:4" },    { c: 1, r: 1, ar: "4:3" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "3:4" },    { c: 1, r: 2, ar: "4:3" },    { c: 1, r: 1, ar: "1:1" },
+  { c: 1, r: 1, ar: "3:4" },    { c: 2, r: 1, ar: "4:3" },    { c: 1, r: 1, ar: "1:1" }
+];
 
-  useEffect(() => {
-    const track1 = track1Ref.current
-    const track2 = track2Ref.current
-    if (!track1 || !track2) return
-
-    const computeWidths = () => {
-      // full scrollable width divided by 2 (because we duplicated)
-      width1.current = track1.scrollWidth / 2
-      width2.current = track2.scrollWidth / 2
-      // ensure transforms are clamped to new widths to avoid jumps
-      pos1.current = pos1.current % width1.current
-      pos2.current = pos2.current % width2.current
-      track1.style.transform = `translate3d(${-pos1.current}px,0,0)`
-      track2.style.transform = `translate3d(${-pos2.current}px,0,0)`
-    }
-
-    // wait for images to load before measuring widths (avoids wrong scrollWidth causing jumps)
-    const imgs = Array.from(track1.querySelectorAll('img')).concat(Array.from(track2.querySelectorAll('img')))
-    let imgsLoaded = 0
-    const onImgLoad = () => {
-      imgsLoaded += 1
-      if (imgsLoaded >= imgs.length) {
-        computeWidths()
-      }
-    }
-
-    if (imgs.length === 0) {
-      computeWidths()
-    } else {
-      imgs.forEach((img) => {
-        if (img.complete) onImgLoad()
-        else img.addEventListener('load', onImgLoad, { once: true })
-      })
-      // fallback: compute after short timeout in case some images never fire
-      setTimeout(computeWidths, 1500)
-    }
-
-    window.addEventListener('resize', computeWidths)
-
-    const step = (time) => {
-      if (!lastTimeRef.current) lastTimeRef.current = time
-      const dt = (time - lastTimeRef.current) / 1000
-      lastTimeRef.current = time
-
-      if (!paused1.current && width1.current > 0) {
-        // apply keyboard modifiers: left -> faster left, right -> faster right (right subtracts)
-        const ks = keyState.current
-        const delta1 = (ks.left ? boost : 0) - (ks.right ? boost : 0)
-        const v1 = speed1 + delta1
-        pos1.current += v1 * dt
-        if (pos1.current >= width1.current) pos1.current -= width1.current
-        if (pos1.current < 0) pos1.current += width1.current
-        track1.style.transform = `translate3d(${-pos1.current}px,0,0)`
-      }
-
-      if (!paused2.current && width2.current > 0) {
-        const ks = keyState.current
-        const delta2 = (ks.left ? boost : 0) - (ks.right ? boost : 0)
-        const v2 = speed2 + delta2
-        pos2.current += v2 * dt
-        if (pos2.current >= width2.current) pos2.current -= width2.current
-        if (pos2.current < 0) pos2.current += width2.current
-        track2.style.transform = `translate3d(${-pos2.current}px,0,0)`
-      }
-
-      rafRef.current = requestAnimationFrame(step)
-    }
-
-    rafRef.current = requestAnimationFrame(step)
-
-    return () => {
-      cancelAnimationFrame(rafRef.current)
-      window.removeEventListener('resize', computeWidths)
-    }
-  }, [])
-
-  // register key handlers to update keyState
-  useEffect(() => {
-    const onKeyDown = (e) => {
-      if (e.key === 'ArrowLeft') {
-        keyState.current.left = true
-        e.preventDefault()
-      } else if (e.key === 'ArrowRight') {
-        keyState.current.right = true
-        e.preventDefault()
-      }
-    }
-    const onKeyUp = (e) => {
-      if (e.key === 'ArrowLeft') keyState.current.left = false
-      else if (e.key === 'ArrowRight') keyState.current.right = false
-    }
-    window.addEventListener('keydown', onKeyDown)
-    window.addEventListener('keyup', onKeyUp)
-    return () => {
-      window.removeEventListener('keydown', onKeyDown)
-      window.removeEventListener('keyup', onKeyUp)
-    }
-  }, [])
-
-  // use the dedicated background image placed at `src/data/GalleryBG.png`
-  const bgUrl = new URL('../data/GalleryBG.png', import.meta.url).href
-  // only set the background image here; sizing/positioning handled by Tailwind classes
-  const sectionStyle = {
-    backgroundImage: `url(${bgUrl})`,
+const getRowSpan = (colSpan, aspectRatio, rowConfig) => {
+  const baseHeight = 12;
+  
+  const heightMultiplier = (colSpan >= 3 || rowConfig >= 2) ? 0.7 : 1;
+  
+  if (aspectRatio === "1:1") {
+    return Math.round(colSpan * baseHeight * heightMultiplier);
+  } else if (aspectRatio === "4:3") {
+    return Math.round((colSpan * baseHeight * 3) / 4 * heightMultiplier);
+  } else if (aspectRatio === "3:4") {
+    return Math.round((colSpan * baseHeight * 4) / 3 * heightMultiplier);
   }
+  
+  return Math.round(colSpan * baseHeight * heightMultiplier);
+};
+
+export default function GalleryCollage({ images }) {
+
+  const defaultImages = Array.from({ length: IMAGE_COUNT }).map((_, i) => {
+    const id = IDS[i % IDS.length] + Math.floor(i / IDS.length) * 2;
+    return `https://picsum.photos/id/${id-5}/900/400`;
+  });
+
+
+  const imgs = images && images.length ? images.slice(0, IMAGE_COUNT) : defaultImages;
+
+  const [hovered, setHovered] = useState(null);
+
+
+
 
   return (
-  <section className="py-8 relative min-h-screen bg-center bg-cover bg-no-repeat" style={sectionStyle}>
-      {/* subtle overlay so text and tracks remain readable */}
-      <div className="absolute inset-0 bg-black/30 pointer-events-none" />
-      {/* heading image */}
-      <div className="flex justify-center mb-10 relative">
+    <div className="w-full  min-h-screen bg-[radial-gradient(ellipse_at_center,black_0%,#5F0410_100%)] py-4 px-0 pt-10 pb-20">
+      <div className="max-w-7xl mx-auto mb-6 text-center">
+      
+
+        <div className="flex justify-center mb-10 relative">
         <img
           src={new URL('../data/GalleryText.png', import.meta.url).href}
           alt="Gallery"
           className="h-14 object-contain"
         />
       </div>
+       
+      </div>
 
-      <div className="relative overflow-hidden" onMouseEnter={() => (paused1.current = true)} onMouseLeave={() => (paused1.current = false)}>
-        {/* marquee track (left) */}
-        <div ref={track1Ref} className="flex items-center flex-nowrap will-change-transform">
-          {items.map((item, idx) => {
-            const shapeVariants = [
-              'rounded-md',
-              'rounded-full',
-              'rounded-tl-3xl',
-              'rounded-tr-3xl',
-              'rounded-bl-3xl',
-              'rounded-br-3xl',
-              'rounded-lg',
-            ]
-            const shape = shapeVariants[idx % shapeVariants.length]
+      <div className="w-full px-0">
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 auto-rows-[6px] gap-2 max-w-7xl mx-auto"
+          style={{ alignItems: "stretch" }}
+        >
+          {imgs.map((src, idx) => {
+            const layout = LAYOUT[idx % LAYOUT.length];
+            const colSpan = layout.c;
+            const aspectRatio = layout.ar;
+            const rowConfig = layout.r;
+            const rowSpan = getRowSpan(colSpan, aspectRatio, rowConfig);
+
+            const isOtherDimmed = hovered !== null && hovered !== idx;
+            
             return (
-              <div key={`${item.id}-${idx}`} className="mx-3 mt-4 flex-shrink-0" aria-hidden={idx >= gallery.length}>
-                <div className={``}>
-                  <img src={item.src} alt={item.title} className={`w-full h-40 object-cover`} />
-                </div>
-                {/* <p className="text-sm mt-2 text-center text-white">{item.title}</p> */}
+              <div
+                key={idx}
+                onMouseEnter={() => setHovered(idx)}
+                onMouseLeave={() => setHovered(null)}
+                className={`
+                  relative overflow-hidden
+                  transition-all duration-300 ease-out
+                  cursor-pointer
+                  border-2 border-[#FFDF49]
+                  ${hovered === idx 
+                    ? "transform scale-[1.02] z-30 shadow-lg border-[#FFDF49]" 
+                    : "transform scale-100 border-[#FFDF49]"
+                  }
+                  ${isOtherDimmed 
+                    ? "opacity-100 scale-[0.99] brightness-50" 
+                    : "opacity-100 brightness-100"
+                  }
+                  hover:shadow-lg hover:border-[#FFDF49]
+                `}
+                style={{
+                  gridColumn: `span ${colSpan}`,
+                  gridRow: `span ${rowSpan}`,
+                }}
+              >
+                <img
+                  src={src}
+                  alt={`Gallery image ${idx + 1}`}
+                  draggable={false}
+                  className={`
+                    w-full h-full object-cover
+                    transition-transform duration-400 ease-out
+                    ${hovered === idx ? "scale-108" : "scale-100"}
+                  `}
+                />
+                
+                <div className={`
+                  absolute inset-0 bg-black 
+                  transition-opacity duration-250
+                  ${hovered === idx ? "opacity-10" : "opacity-0"}
+                `} />
+                
+                
+                {/* <div className={`
+                  absolute top-1 right-1 bg-black/80 text-[#FFDF49] text-[10px] px-1.5 py-0.5 rounded
+                  backdrop-blur-sm transition-opacity duration-200 border border-[#FFDF49]
+                  ${hovered === idx ? "opacity-100" : "opacity-0"}
+                `}>
+                  {idx + 1}
+                </div> */}
               </div>
-            )
+            );
           })}
         </div>
       </div>
 
-      <div className="relative overflow-hidden mt-20" onMouseEnter={() => (paused2.current = true)} onMouseLeave={() => (paused2.current = false)}>
-        {/* marquee track (left slow) */}
-        <div ref={track2Ref} className="flex items-center flex-nowrap will-change-transform">
-          {items2.map((item, idx) => {
-            const shapeVariants = [
-              'rounded-md',
-              'rounded-full',
-              'rounded-tl-3xl',
-              'rounded-tr-3xl',
-              'rounded-bl-3xl',
-              'rounded-br-3xl',
-              'rounded-lg',
-            ]
-            const shape = shapeVariants[idx % shapeVariants.length]
-            return (
-              <div key={`${item.id}-${idx}`} className=" mx-3 flex-shrink-0" aria-hidden={idx >= gallery2.length}>
-                <div className={''}>
-                  <img src={item.src} alt={item.title} className={`w-full h-40 object-cover`} />
-                </div>
-                {/* <p className="text-sm mt-2 text-center text-white">{item.title}</p> */}
-              </div>
-            )
-          })}
-        </div>
-      </div>
-    </section>
-  )
+     
+    </div>
+  );
 }
-
-export default GalleryPage

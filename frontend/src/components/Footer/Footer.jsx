@@ -1,7 +1,7 @@
 import React from 'react';
 import "./Footer.css";
 // Import icons from react-icons
-import srijanLogo from "../../assets/logo-proto-4.png";
+import srijanLogo from "../../Assets/logo-proto-4.png";
 // --- Logo ---
 // In your project, you would import your logo like this:
 // import srijanLogo from './assets/srijan-logo.png';
