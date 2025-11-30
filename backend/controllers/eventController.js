@@ -23,14 +23,15 @@ const createEvent = asynchandler(async (req, res) => {
         rulebook,
         rules,
         coordinator_names,
-        coordinator_phone
+        coordinator_phone,
+        registration_link
     } = req.body;
 
     // Basic validation
     if (
-        [event_name, event_category, venue, description].some(field => !field?.trim())
+        [event_name, event_category, venue, description,registration_link].some(field => !field?.trim())
     ) {
-        throw new ApiError(400, "Event name, category, venue, and description are required");
+        throw new ApiError(400, "Event name, category, venue, description, and registration link are required");
     }
 
     // Validate category against constants
@@ -39,10 +40,14 @@ const createEvent = asynchandler(async (req, res) => {
     }
 
     // Check for existing event name
-    const existingEvent = await Event.findOne({ event_name });
+    const existingEvent = await Event.findOne({$or: [
+    { event_name },
+    { registration_link }
+  ]});
     if (existingEvent) {
         throw new ApiError(409, "An event with this name already exists");
     }
+    
 
     // Create event
     const event = await Event.create({
@@ -50,6 +55,7 @@ const createEvent = asynchandler(async (req, res) => {
         event_category,
         venue,
         description,
+        registration_link,
         bg_image_url: bg_image_url || "",
         rulebook: rulebook || "",
         rules: rules || [],

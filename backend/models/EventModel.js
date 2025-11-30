@@ -28,6 +28,12 @@ const eventSchema = new mongoose.Schema(
       type: String,
       trim: true
     },
+    registration_link: {
+      type: String,
+      trim: true,
+      unique: true,
+      required: [true, "Registration link is required"]
+    },
 
     rulebook: {
       type: String,
@@ -57,6 +63,33 @@ const eventSchema = new mongoose.Schema(
         message: "Each phone number must be a valid 10-digit number",
       },
     },
+    // cooridnators:{
+    //   type:[
+    //     {
+    //     name:{
+    //     type:String, 
+    //     required:true,
+    //     validate: {
+    //     validator: (n) => n.trim().length > 0,
+    //     message: "Coordinator names must be non-empty strings",
+    //     }
+
+    //   }, 
+    //     phones:{
+    //       type:[String], 
+    //       required:true,
+    //       validate: {
+    //     validator: (arr) =>
+    //       arr.every((p) => /^[0-9]{10}$/.test(p)),
+    //     message: "Each phone number must be a valid 10-digit number",
+    //       },
+    //     }
+    //   }
+    //   ],
+
+    //   required:true
+    //   ,
+    // },
     users: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -64,6 +97,7 @@ const eventSchema = new mongoose.Schema(
         default: [],
       },
     ],
+
   },
   {
     timestamps: true,
