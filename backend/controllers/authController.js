@@ -110,7 +110,7 @@ const loginuser=asynchandler(async(req,res)=>{
         new ApiResponse(200,{
                 user:loggedinuser,
                 accesstoken:accestoken,
-                refreshtoken:refreshtoken
+                refreshtoken:refreshtoken,
             },
         "User logged in succesfully")
     )
@@ -118,7 +118,7 @@ const loginuser=asynchandler(async(req,res)=>{
 
 const logoutuser=asynchandler(async(req,res)=>{
 await User.findByIdAndUpdate(
-        
+
         req.user._id,
         {
             $unset:{
@@ -126,12 +126,12 @@ await User.findByIdAndUpdate(
             }
         },
             {
-                new:true        
+                new:true
             }
     )
 
     const options={
-            httpOnly:true,     
+            httpOnly:true,
             secure:true,
             sameSite: "None"
         }
@@ -148,7 +148,7 @@ const refreshaccesstoken=asynchandler(async(req,res)=>{
     try {
         const decodedtoken=jwt.verify(
         incomingrefreshToken, process.env.REFRESH_TOKEN_SECRET);
-    
+
         const user=await User.findById(decodedtoken?._id);
         if(!user){
             throw new ApiError(401,"Unauthorized request");
@@ -161,7 +161,7 @@ const refreshaccesstoken=asynchandler(async(req,res)=>{
             secure:true,
             sameSite: "None"
         }
-    
+
        const{accesstoken,refreshtoken}=await generateaccessandrefreshtoken(user._id);
        return res.status(200).cookie("accessToken",accesstoken,options).cookie("refreshtoken",refreshtoken,options)
        .json(new ApiResponse(200,{accesstoken,refreshtoken},"Access Token refreshed"));
