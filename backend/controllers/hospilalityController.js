@@ -31,7 +31,7 @@ const userpackages = async (req, res) => {
     if(!star_night){
         star_night=false;
     }
-    if(packag=="three-day-with-food"){
+    if(packag=="three-day-with-food" || packag=="three-day-without-food"){
         star_night=true;
     }
     try {
