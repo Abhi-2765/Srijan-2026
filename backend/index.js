@@ -9,6 +9,7 @@ import cookieParser from 'cookie-parser';
 import userrouter from './routes/userRoutes.js';
 import eventrouter from './routes/eventRoutes.js';
 import  errorHandler  from './middleware/errorMiddleware.js';
+import hospitalityrouter from './routes/hospitalityRoutes.js';
 
 
 
@@ -41,6 +42,7 @@ app.use(rateLimit({
   
   app.use("/api/v1/user",userrouter);
   app.use("/api/v1/event", eventrouter);
+  app.use("/api/v1/hospitality", hospitalityrouter);
   
   app.use(errorHandler);
   

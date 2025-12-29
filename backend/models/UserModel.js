@@ -8,6 +8,14 @@ const userschema=new mongoose.Schema({
         required:[true,"Full Name is required"],
         trim:true
     },
+    hospitality_package:{
+        type:String,
+        trim:true
+    },
+    star_night:{
+        type:Boolean,
+        default:false
+    },
     email:{
         type:String,
         required:[true,"Email id is required"],

@@ -31,8 +31,7 @@ const eventSchema = new mongoose.Schema(
     registration_link: {
       type: String,
       trim: true,
-      unique: true,
-      required: [true, "Registration link is required"]
+      default: "Registration link will be out soon"
     },
 
     rulebook: {
