@@ -12,6 +12,10 @@ const userschema=new mongoose.Schema({
         type:Boolean,
         default:false
     },
+    successfulpayment:{
+        type:Boolean,
+        default:false
+    },
     hospitality_package:{
         type:String,
         trim:true

@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import {User} from "../models/UserModel.js";
 import { razorpay } from "../config/razorpay.js";
+import crypto from "crypto";
 
 
 const sendpackageinfo = async (req, res) => {
@@ -74,10 +75,10 @@ const userpackages = async (req, res) => {
     const options = {
       amount: amount * 100,
       currency: "INR",
-      receipt: `receipt_${Date.now()}_${user._id}_${packag}_${star_night}_${user.email}`,
+      receipt: `receipt_${Date.now()}`,
     };
     try{
-        order = await razorpay.orders.create(options);
+        order = await razorpay().orders.create(options);
     }
     catch(err){
         return res.status(500).json({success:false,err,message:"Order creation failed",error:err.message});
@@ -95,4 +96,29 @@ const userpackages = async (req, res) => {
     }
 }
 
-export { sendpackageinfo, userpackages };
+const verifySignature = async (req,res) => {
+    const {order_id,payment_id,signature} = req.body;
+    const userid= req.user._id;
+    if(!order_id || !payment_id || !signature){
+        return res.status(400).json({success:false,message:"Missing required fields"});
+    }
+    if(!userid){
+        return res.status(400).json({success:false,message:"User not found"});
+    }
+    const generated_signature = crypto
+      .createHmac("sha256", process.env.RAZORPAY_KEY_SECRET)
+      .update(`${order_id}|${payment_id}`)
+      .digest("hex");
+     if (generated_signature === signature) {
+        const user = await User.findOne({ razorpay_order_id: order_id });
+  if (user) {
+    user.successfulpayment = true;
+    await user.save();
+  }
+    return res.json({ success: true });
+  } else {
+    return res.status(400).json({ success: false });
+  }
+    };
+
+export { sendpackageinfo, userpackages , verifySignature};
