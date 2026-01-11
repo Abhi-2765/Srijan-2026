@@ -20,6 +20,9 @@ const userschema=new mongoose.Schema({
         type:String,
         trim:true
     },
+    merchandise_package:[{
+        type:{pack:{type:String,trim:true},size:{type:String},quantity:{type:Number},orderid:{type:String,trim:true},paid:{type:Boolean,default:false},delivered:{type:Boolean,default:false}},
+    }],
     star_night:{
         type:Boolean,
         default:false
