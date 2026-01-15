@@ -16,7 +16,7 @@ const events = [
     date: "7th Feb",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1EhUgI-4xN3_qZvlvMEoGr6gLhLGJ6d4_--ZUZFV1mV4/edit",
-    bg_image_url: "https://drive.google.com/file/d/1DNk29uZ8PK8YnGNSudq3mRRddQz6JFYe/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
   },
   {
     event_name: "Street Beats",
@@ -36,7 +36,7 @@ const events = [
     date: "6th Feb",
     prize: 30000,
     rulebook: "https://docs.google.com/document/d/1d__cJ4TEBhWG6PO3gaOEgje6Ue22r_c2haHW5LewcHQ/edit",
-    bg_image_url: "https://drive.google.com/file/d/1DNk29uZ8PK8YnGNSudq3mRRddQz6JFYe/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
   },
   {
     event_name: "Reflection",
@@ -46,7 +46,7 @@ const events = [
     date: "6th Feb",
     prize: 40000,
     rulebook: "https://docs.google.com/document/d/1m89BAOSQUYB4W0KalyS3eZjOjRn9Jq0WfNkNyH7oWwY/edit",
-    bg_image_url: "https://drive.google.com/file/d/1DNk29uZ8PK8YnGNSudq3mRRddQz6JFYe/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
 
   },
   {
@@ -57,7 +57,7 @@ const events = [
     date: "6th Feb",
     prize: 50000,
     rulebook: "https://docs.google.com/document/d/10kEWZFACzTvxZefW4pXPTv7kzQiru-ES0hPD2IMafrE/edit",
-    bg_image_url: "https://drive.google.com/file/d/15txx6LhkW3rjpM1WHfZPGfpqBYd8Yp_J/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119474/Copy_of_ABOUT_US_1_iqgfkt.png"
   },
 
   // ================= MUSIC =================
@@ -79,7 +79,7 @@ const events = [
     date: "7th Feb",
     prize: 15000,
     rulebook: "https://docs.google.com/document/d/1FW1Y6P14BvA4NacuD2uXWwMr2fNax-UtbtpD88fAlWs/edit",
-    bg_image_url: "https://drive.google.com/file/d/1CzhI9YyP789eVWK_XbuFlFpK5kVuPE0a/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119451/Copy_of_ABOUT_US_2_oyzbbz.png"
   },
 
   // ================= FASHION =================
@@ -133,7 +133,7 @@ const events = [
     date: "Online",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1MCG-hgip6W8nlgfjK_q9AyYF6GjaPcFCtaDYQdafVJk/edit",
-    bg_image_url: "https://drive.google.com/file/d/1WsniE1znuQXiBS8TSYg1HPzeOyDGb5IA/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119452/Copy_of_ABOUT_US_4_zuc5yn.png"
   },
 
   // ================= THEATRE =================
@@ -196,7 +196,7 @@ const events = [
     date: "7th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1avdGrSBqr7C1FsHf1ageFmAOy6ZekKoX5eT3jRAZy1s/edit",
-    bg_image_url: "https://drive.google.com/file/d/1Jk7Miw8CayFnSUQJXUQrjWrFg5kn4LfZ/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_9_eljymm.png"
   },
 
   // ================= PHOTOGRAPHY =================
@@ -230,7 +230,7 @@ const events = [
     date: "7th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1RiuPwoHajlSbzkZ47lny-s1NDfJFSHTQ8bGEXjkTS68/edit",
-    bg_image_url: "https://drive.google.com/file/d/1cxTXRoUzU6E6qZDXlrFu_loMnspwj1Em/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png"
   },
   {
     event_name: "ISM's Got Latent",
@@ -240,7 +240,7 @@ const events = [
     date: "8th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1ICTPnQ5Xby5_IhTQ2p191EbD1BdVzbuXpWVFcNqKxiU/edit",
-    bg_image_url: "https://drive.google.com/file/d/1cxTXRoUzU6E6qZDXlrFu_loMnspwj1Em/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png"
 
   },
 
@@ -273,7 +273,7 @@ const events = [
     date: "8th Feb",
     prize: 12000,
     rulebook: "https://docs.google.com/document/d/1mr8UmZ6Fi7nM4RC1qp4nypK1R4nnfgBcV25Z5Q06m94/edit",
-    bg_image_url: "https://drive.google.com/file/d/1M04uCnpiX2FEoIkQsIm8qpRhQ2zy_mqU/view?usp=sharing"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_8_skskgs.png"
   },
   {
     event_name: "Folktwist",
