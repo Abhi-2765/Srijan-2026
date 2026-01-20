@@ -16,7 +16,8 @@ const events = [
     date: "7th Feb",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1EhUgI-4xN3_qZvlvMEoGr6gLhLGJ6d4_--ZUZFV1mV4/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png",
+    registration_link: "https://unstop.com/events/street-reloaded-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624850"
   },
   {
     event_name: "Street Beats",
@@ -26,7 +27,8 @@ const events = [
     date: "7th Feb",
     prize: 40000,
     rulebook: "https://docs.google.com/document/d/1VuJ1zuE7nbI-CBOXE3Xu9V19yfZdttGoHYhjSowwvsc/edit",
-    bg_image_url: "https://images.unsplash.com/photo-1698222231294-244fe4c3b1d5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url: "https://images.unsplash.com/photo-1698222231294-244fe4c3b1d5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/o/zNpcEWO?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
   {
     event_name: "Footloose",
@@ -36,7 +38,8 @@ const events = [
     date: "6th Feb",
     prize: 30000,
     rulebook: "https://docs.google.com/document/d/1d__cJ4TEBhWG6PO3gaOEgje6Ue22r_c2haHW5LewcHQ/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png",
+    registration_link: "https://unstop.com/events/footloose-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624780"
   },
   {
     event_name: "Reflection",
@@ -46,8 +49,8 @@ const events = [
     date: "6th Feb",
     prize: 40000,
     rulebook: "https://docs.google.com/document/d/1m89BAOSQUYB4W0KalyS3eZjOjRn9Jq0WfNkNyH7oWwY/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png"
-
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png",
+    registration_link: "https://unstop.com/o/dQzRFt8?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
   {
     event_name: "Hustle Herd",
@@ -57,7 +60,8 @@ const events = [
     date: "6th Feb",
     prize: 50000,
     rulebook: "https://docs.google.com/document/d/10kEWZFACzTvxZefW4pXPTv7kzQiru-ES0hPD2IMafrE/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119474/Copy_of_ABOUT_US_1_iqgfkt.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119474/Copy_of_ABOUT_US_1_iqgfkt.png",
+    registration_link: "https://unstop.com/events/hustle-herd-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624796"
   },
 
   // ================= MUSIC =================
@@ -69,7 +73,8 @@ const events = [
     date: "8th Feb",
     prize: 25000,
     rulebook: "https://docs.google.com/document/d/1LKUiiMEPMTqUxhwxsjMCd-wqWZsjzaLqMhOVIqF8xVw/edit",
-    bg_image_url: "https://images.unsplash.com/photo-1484876065684-b683cf17d276?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url: "https://images.unsplash.com/photo-1484876065684-b683cf17d276?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/harmony-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624888"
   },
   {
     event_name: "Aaroh",
@@ -79,7 +84,8 @@ const events = [
     date: "7th Feb",
     prize: 15000,
     rulebook: "https://docs.google.com/document/d/1FW1Y6P14BvA4NacuD2uXWwMr2fNax-UtbtpD88fAlWs/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119451/Copy_of_ABOUT_US_2_oyzbbz.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119451/Copy_of_ABOUT_US_2_oyzbbz.png",
+    registration_link: "https://unstop.com/o/WAexjnD?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
 
   // ================= FASHION =================
@@ -91,7 +97,8 @@ const events = [
     date: "7th Feb",
     prize: 35000,
     rulebook: "https://docs.google.com/document/d/1aOFlJIQMwEl91lw6ZMhVL1Ztcc_aFGZhqSWL7Ezgffw/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/paridhan-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624858"
   },
   {
     event_name: "Mr. & Mrs. Srijan",
@@ -101,7 +108,8 @@ const events = [
     date: "6th Feb",
     prize: 25000,
     rulebook: "https://docs.google.com/document/d/1_NIoZolEBGZbcEKpZMiv8KXuNj_ZgE2OUOrQKE21npg/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1733322987243-65e222f1ada8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1733322987243-65e222f1ada8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/competitions/mr-mrs-srijan-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624807"
   },
 
   // ================= FILM =================
@@ -113,7 +121,8 @@ const events = [
     date: "Online",
     prize: 8000,
     rulebook: "https://docs.google.com/document/d/1D98NksNeZEdVl0G66EhUAZw6BrLb9mMxsF3CXWgpwYo/edit",
-    bg_image_url:"https://plus.unsplash.com/premium_photo-1666299355977-5b45612c03b3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://plus.unsplash.com/premium_photo-1666299355977-5b45612c03b3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/o/JU1xIF7?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
   {
     event_name: "Frames of Srijan",
@@ -123,7 +132,8 @@ const events = [
     date: "Online",
     prize: 13000,
     rulebook: "https://docs.google.com/document/d/1atAr9OnhJNkBMwl_VHu2jERp9bCpyEcB0Xpbo5zwXow/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1582053628662-c65b0e0544e9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1582053628662-c65b0e0544e9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/o/czoa6Mp?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
   {
     event_name: "Online Short Film Making",
@@ -133,7 +143,8 @@ const events = [
     date: "Online",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1MCG-hgip6W8nlgfjK_q9AyYF6GjaPcFCtaDYQdafVJk/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119452/Copy_of_ABOUT_US_4_zuc5yn.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119452/Copy_of_ABOUT_US_4_zuc5yn.png",
+    registration_link: "https://unstop.com/o/czoa6Mp?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
 
   // ================= THEATRE =================
@@ -145,7 +156,8 @@ const events = [
     date: "6th Feb",
     prize: 15000,
     rulebook: "https://docs.google.com/document/d/1MQXMk3mmvWo8n9i0djxI5SCV1C0wpDnMhtLvir1MilM/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1615414015111-8d98cb65677e?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1615414015111-8d98cb65677e?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/ek-abhinay-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624697"
   },
   {
     event_name: "Hoonkaar",
@@ -155,7 +167,8 @@ const events = [
     date: "7th Feb",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1vFLg1lqwNADUdn2krU5m8mCYtsHkxaPf0XLkitS3pz0/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1565798846807-2af22c843402?q=80&w=666&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1565798846807-2af22c843402?q=80&w=666&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/hoonkar-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624842"
   },
 
   // ================= ART =================
@@ -167,7 +180,8 @@ const events = [
     date: "6th Feb",
     prize: 7000,
     rulebook: "https://docs.google.com/document/d/1ACGTs1FXCIAF6N3LLuFpV_lrMeUaGcIWg66u6m-0oLo/edit?tab=t.0#heading=h.pi0hlvln7maf",
-    bg_image_url:"https://plus.unsplash.com/premium_photo-1675719067585-692e59189e31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://plus.unsplash.com/premium_photo-1675719067585-692e59189e31?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/clay-modelling-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624782"
   },
   {
     event_name: "DIY Mosaic",
@@ -176,7 +190,8 @@ const events = [
     description: "Collaborative mosaic painting activity with free caricatures.",
     date: "6th Feb",
     prize: 0,
-    rulebook: "https://images.unsplash.com/photo-1579541982208-f050c2503aae?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    rulebook: "https://images.unsplash.com/photo-1579541982208-f050c2503aae?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/o/oKEtcrR?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
   },
   {
     event_name: "Face Painting",
@@ -186,7 +201,8 @@ const events = [
     date: "8th Feb",
     prize: 7000,
     rulebook: "https://docs.google.com/document/d/1JrYew4Izrd6tkPHKjCyCTHYlpYRbQo7sxdkuGx_c2ZM/edit?tab=t.0#heading=h.uskfbwddwxzt",
-    bg_image_url:"https://images.unsplash.com/photo-1613514434261-49c19c1adaf5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1613514434261-49c19c1adaf5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/events/face-painting-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624871"
   },
   {
     event_name: "Graphic Grapple",
@@ -196,7 +212,8 @@ const events = [
     date: "7th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1avdGrSBqr7C1FsHf1ageFmAOy6ZekKoX5eT3jRAZy1s/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_9_eljymm.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_9_eljymm.png",
+    registration_link: "https://unstop.com/events/graphic-grapple-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624835"
   },
 
   // ================= PHOTOGRAPHY =================
@@ -208,7 +225,8 @@ const events = [
     date: "6th Feb",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/1h_OR99jG5mAKBOGZK1rljV2bhW5iv2fqPCMl-TBSfoE/edit",
-    bg_image_url:"https://plus.unsplash.com/premium_photo-1723651354432-7796fb4ecebc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://plus.unsplash.com/premium_photo-1723651354432-7796fb4ecebc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/competitions/fotorush-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624734"
   },
   {
     event_name: "Srijan Through My Lens",
@@ -218,7 +236,8 @@ const events = [
     date: "Online",
     prize: 6000,
     rulebook: "https://docs.google.com/document/d/1h_OR99jG5mAKBOGZK1rljV2bhW5iv2fqPCMl-TBSfoE/edit?tab=t.0",
-    bg_image_url:"https://images.unsplash.com/photo-1551332772-f6bc95b9ed1f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1551332772-f6bc95b9ed1f?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: ""
   },
 
   // ================= COMEDY =================
@@ -230,7 +249,8 @@ const events = [
     date: "7th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1RiuPwoHajlSbzkZ47lny-s1NDfJFSHTQ8bGEXjkTS68/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png",
+    registration_link: "https://unstop.com/competitions/saanp-tank-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624829"
   },
   {
     event_name: "ISM's Got Latent",
@@ -240,8 +260,8 @@ const events = [
     date: "8th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1ICTPnQ5Xby5_IhTQ2p191EbD1BdVzbuXpWVFcNqKxiU/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png"
-
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119518/Copy_of_ABOUT_US_11_ow1jdx.png",
+    registration_link: "https://unstop.com/events/isms-got-latent-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624881"
   },
 
   // ================= LITERARY =================
@@ -253,7 +273,8 @@ const events = [
     date: "6th Feb",
     prize: 20000,
     rulebook: "https://docs.google.com/document/d/19Zu8Ro9LunKj_Q5mCICr7jrRWnUG-sLIxhiFev8veLc/edit",
-    bg_image_url:"https://plus.unsplash.com/premium_photo-1661311950994-d263ea9681a1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://plus.unsplash.com/premium_photo-1661311950994-d263ea9681a1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/quiz/chakravyuh-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624792"
   },
   {
     event_name: "Kavyadhara",
@@ -263,7 +284,8 @@ const events = [
     date: "7th Feb",
     prize: 10000,
     rulebook: "https://docs.google.com/document/d/1VjtRws4b_1mUYWfATl0cqLJQCHMbr0MF_zLVoukdq3w/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1657302155425-611b7aba5b33?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1657302155425-611b7aba5b33?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: ""
   },
   {
     event_name: "Plot Paradox",
@@ -273,7 +295,8 @@ const events = [
     date: "8th Feb",
     prize: 12000,
     rulebook: "https://docs.google.com/document/d/1mr8UmZ6Fi7nM4RC1qp4nypK1R4nnfgBcV25Z5Q06m94/edit",
-    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_8_skskgs.png"
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119453/Copy_of_ABOUT_US_8_skskgs.png",
+    registration_link: "https://unstop.com/events/plot-paradox-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624863"
   },
   {
     event_name: "Folktwist",
@@ -283,7 +306,8 @@ const events = [
     date: "6th Feb",
     prize: 13000,
     rulebook: "https://docs.google.com/document/d/1Ir7jUA0wGdLyDK8zTxooAv13wuzA4EYa_N_TvHZAT40/edit",
-    bg_image_url: "https://images.unsplash.com/photo-1586751381168-4ac50cb6458a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url: "https://images.unsplash.com/photo-1586751381168-4ac50cb6458a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: ""
   },
   {
     event_name: "Trialthlon",
@@ -293,7 +317,8 @@ const events = [
     date: "6th Feb",
     prize: 12000,
     rulebook: "https://docs.google.com/document/d/1yAxUk1zjYqqHuN7Kn2pjE4a7Extv0VWGxbZwYB7icYE/edit",
-    bg_image_url: "https://plus.unsplash.com/premium_photo-1689701711439-e54f039f8d97?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url: "https://plus.unsplash.com/premium_photo-1689701711439-e54f039f8d97?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: ""
   },
 
   // ================= MISC =================
@@ -305,7 +330,8 @@ const events = [
     date: "8th Feb",
     prize: 12000,
     rulebook: "https://docs.google.com/document/d/1U0KdaQyEhm3j81BFAsKMLxoGz6rxIdLvukSn0C4F5FU/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1653292744174-485adb532f61?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1653292744174-485adb532f61?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/quiz/triwizard-tournament-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624878"
   },
   {
     event_name: "Speak Snitch Survive",
@@ -315,7 +341,8 @@ const events = [
     date: "6th Feb",
     prize: 30000,
     rulebook: "https://docs.google.com/document/d/1UJam5DmP3_w92qkPvnu2YORS3DIXcyVZod1SISijTBQ/edit",
-    bg_image_url: "https://images.unsplash.com/photo-1674081955099-9a290e8f5947?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url: "https://images.unsplash.com/photo-1674081955099-9a290e8f5947?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/competitions/speak-snitch-survive-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624788"
   },
   {
     event_name: "HELM Quiz",
@@ -324,7 +351,8 @@ const events = [
     description: "Team quiz event testing logic and general knowledge.",
     date: "7th Feb",
     prize: 12000,
-    rulebook: "https://plus.unsplash.com/premium_photo-1678495324671-cfa4a96ddf05?q=80&w=741&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    rulebook: "https://plus.unsplash.com/premium_photo-1678495324671-cfa4a96ddf05?q=80&w=741&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/quiz/helm-quiz-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624818"
   },
   {
     event_name: "General Quiz",
@@ -334,7 +362,8 @@ const events = [
     date: "6th Feb",
     prize: 12000,
     rulebook: "https://docs.google.com/document/d/1tlXiRCBzpGyYIEwHmA_tgt3zipL_hEMfMozXN-RuYRk/edit",
-    bg_image_url:"https://plus.unsplash.com/premium_photo-1680303237111-35809e47fcc1?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://plus.unsplash.com/premium_photo-1680303237111-35809e47fcc1?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: "https://unstop.com/quiz/general-quiz-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624784"
   },
   {
     event_name: "Flavours of the Globe",
@@ -344,7 +373,8 @@ const events = [
     date: "7th Feb",
     prize: 0,
     rulebook: "https://docs.google.com/document/d/16JETWWOmPJFlLWUSJyyajVNYGOqTmhlFHIUhsdYNxM4/edit",
-    bg_image_url:"https://images.unsplash.com/photo-1560161369-db59af5a731f?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    bg_image_url:"https://images.unsplash.com/photo-1560161369-db59af5a731f?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    registration_link: ""
   }
 ];
 
