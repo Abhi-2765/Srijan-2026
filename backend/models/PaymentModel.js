@@ -8,13 +8,9 @@ const paymentSchema = new mongoose.Schema({
         enum: ["pending", "paid"],
         default: "pending"
     }
-
     }
 );
 
-
-// Prevent duplicate successful payments for same order
-paymentSchema.index({ razorpayOrderId: 1, status: 1 });
 
 
 const Payment = mongoose.model("Payment", paymentSchema);
