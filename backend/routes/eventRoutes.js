@@ -8,7 +8,8 @@ import {
     getAllEvents,
     getEventsByCategory,
     getEventById,
-    registerForEvent
+    registerForEvent,
+    getEventsByDate
 } from "../controllers/eventController.js";
 
 const eventrouter = express.Router();
@@ -21,6 +22,10 @@ eventrouter.route("/all").get(getAllEvents);
 
 // Get all events in a specific category
 eventrouter.route("/category/:categoryName").get(getEventsByCategory);
+
+
+// Get all events in a specific category
+eventrouter.route("/category/:date").get(getEventsByDate);
 
 // Get a single event's details
 eventrouter.route("/:id").get(getEventById);

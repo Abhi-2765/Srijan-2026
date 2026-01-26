@@ -24,14 +24,18 @@ const createEvent = asynchandler(async (req, res) => {
         rules,
         coordinator_names,
         coordinator_phone,
-        registration_link
+        registration_link,
+        prize,date
     } = req.body;
+    if(coordinator_names.length !== coordinator_phone.length){
+        throw new ApiError(400, "Coordinator names and phone numbers count mismatch");
+    }
 
     // Basic validation
     if (
-        [event_name, event_category, venue, description,registration_link].some(field => !field?.trim())
+        [event_name, event_category, venue, description,registration_link,prize,date].some(field => !field?.trim())
     ) {
-        throw new ApiError(400, "Event name, category, venue, description, and registration link are required");
+        throw new ApiError(400, "Event name, category, venue, description,prize date and registration link are required");
     }
 
     // Validate category against constants
@@ -47,7 +51,7 @@ const createEvent = asynchandler(async (req, res) => {
     if (existingEvent) {
         throw new ApiError(409, "An event with this name already exists");
     }
-    
+
 
     // Create event
     const event = await Event.create({
@@ -59,8 +63,12 @@ const createEvent = asynchandler(async (req, res) => {
         bg_image_url: bg_image_url || "",
         rulebook: rulebook || "",
         rules: rules || [],
-        coordinator_names: coordinator_names || [],
-        coordinator_phone: coordinator_phone || []
+        coordinator: coordinator_names && coordinator_phone ? coordinator_names.map((name, index) => ({
+            name: name.trim(),
+            phone: coordinator_phone[index].trim()
+        })) : [],
+        prize:prize,
+        date:date
     });
 
     if (!event) {
@@ -87,19 +95,27 @@ const updateEvent = asynchandler(async (req, res) => {
 
     // Check for event_name conflict if it's being updated
     if (updateData.event_name) {
-        const existingEvent = await Event.findOne({ 
-            event_name: updateData.event_name, 
-            _id: { $ne: id } 
+        const existingEvent = await Event.findOne({
+            event_name: updateData.event_name,
+            _id: { $ne: id }
         });
         if (existingEvent) {
             throw new ApiError(409, "Another event with this name already exists");
         }
     }
-    
+
     // Validate category if it's being updated
     if (updateData.event_category && !EVENT_CATEGORIES.includes(updateData.event_category)) {
         throw new ApiError(400, "Invalid event category");
     }
+    if (updateData.coordinator_names && updateData.coordinator_phone) {
+        if (updateData.coordinator_names.length !== updateData.coordinator_phone.length) {
+            throw new ApiError(400, "Coordinator names and phone numbers count mismatch");
+        }
+        updateData.coordinator = updateData.coordinator_names.map((name, index) => ({
+            name: name.trim(),
+            phone: updateData.coordinator_phone[index].trim()
+        }));
 
     const updatedEvent = await Event.findByIdAndUpdate(
         id,
@@ -114,6 +130,7 @@ const updateEvent = asynchandler(async (req, res) => {
     return res.status(200).json(
         new ApiResponse(200, updatedEvent, "Event updated successfully")
     );
+}
 });
 
 /**
@@ -148,8 +165,8 @@ const deleteEvent = asynchandler(async (req, res) => {
  */
 const getAllEvents = asynchandler(async (req, res) => {
     // Exclude users array from this general query for performance
-    const events = await Event.find({}).select("-users"); 
-    
+    const events = await Event.find({}).select("-users");
+
     if (!events) {
         throw new ApiError(404, "No events found");
     }
@@ -181,6 +198,31 @@ const getEventsByCategory = asynchandler(async (req, res) => {
         new ApiResponse(200, events, `Events for ${categoryName} fetched successfully`)
     );
 });
+
+/**
+ * @route GET /api/v1/event/category/:date
+ * @desc Get events by date
+ * @access Public
+ */
+const getEventsByDate = asynchandler(async (req, res) => {
+    const { date } = req.params;
+
+    if (!EVENT_CATEGORIES.includes(date)) {
+        throw new ApiError(400, "Invalid event date");
+    }
+
+    const events = await Event.find({ event_category: date }).select("-users");
+
+    if (!events || events.length === 0) {
+        throw new ApiError(404, `No events found for date: ${date}`);
+    }
+
+    return res.status(200).json(
+        new ApiResponse(200, events, `Events for ${date} fetched successfully`)
+    );
+});
+
+
 
 /**
  * @route GET /api/v1/event/:id
@@ -249,5 +291,6 @@ export {
     getAllEvents,
     getEventsByCategory,
     getEventById,
-    registerForEvent
+    registerForEvent,
+    getEventsByDate
 };

@@ -1,12 +1,16 @@
 const EVENT_CATEGORIES = [
-    'Music',
-    'Dance',
-    'Fine Arts',
-    'Literature',
-    'Drama', 
-    'Fashion', 
-    'Comedy', 
-    'Cinema'
+    'MUSIC',
+    'DANCE',
+    'FINE ARTS',
+    'LITERARY',
+    'DRAMA', 
+    'FASHION', 
+    'COMEDY', 
+    'CINEMA',
+    'FILM',
+    'THEATRE',
+    'ART',
+    'PHOTOGRAPHY'
 ]
 
 export  { EVENT_CATEGORIES};

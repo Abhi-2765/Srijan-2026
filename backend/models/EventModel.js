@@ -8,6 +8,9 @@ const eventSchema = new mongoose.Schema(
       unique: true,
       trim: true
     },
+    prize:{
+      type: String,
+    },
     event_category: {
       type: String,
       required: [true, "Event category is required"],
@@ -31,8 +34,7 @@ const eventSchema = new mongoose.Schema(
     registration_link: {
       type: String,
       trim: true,
-      unique: true,
-      required: [true, "Registration link is required"]
+      default: "Registration link will be out soon"
     },
 
     rulebook: {
@@ -44,25 +46,42 @@ const eventSchema = new mongoose.Schema(
       type: [String],
       default: []
     },
-
-    coordinator_names: {
-      type: [String],
-      default: [],
-      validate: {
-        validator: (arr) => arr.every((n) => n.trim().length > 0),
-        message: "Coordinator names must be non-empty strings",
-      },
+    date:{
+      type:String,
+      required:true
+    },
+    prize:{
+      type:Number,
+      required:true
     },
 
-    coordinator_phone: {
-      type: [String],
+    coordinator:{
+      type:[{name:{type:String},phone:{type:String}}],
       default: [],
       validate: {
-        validator: (arr) =>
-          arr.every((p) => /^[0-9]{10}$/.test(p)),
-        message: "Each phone number must be a valid 10-digit number",
+        validator: (arr) => arr.every(
+          (c) => c.name.trim().length > 0 && /^[0-9]{10}$/.test(c.phone)
+        ),
       },
     },
+    // coordinator_names: {
+    //   type: [String],
+    //   default: [],
+    //   validate: {
+    //     validator: (arr) => arr.every((n) => n.trim().length > 0),
+    //     message: "Coordinator names must be non-empty strings",
+    //   },
+    // },
+
+    // coordinator_phone: {
+    //   type: [String],
+    //   default: [],
+    //   validate: {
+    //     validator: (arr) =>
+    //       arr.every((p) => /^[0-9]{10}$/.test(p)),
+    //     message: "Each phone number must be a valid 10-digit number",
+    //   },
+    // },
     // cooridnators:{
     //   type:[
     //     {

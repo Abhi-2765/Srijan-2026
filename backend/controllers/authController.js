@@ -4,6 +4,7 @@ import { User } from "../models/UserModel.js";
 import ApiResponse from "../utils/apiresponse.js";
 import { verifyJWT } from "../middleware/verifyAuthentication.js";
 import jwt from "jsonwebtoken";
+import mongoose from "mongoose";
 
 const generateaccessandrefreshtoken=async(userid)=>{
     try{
@@ -43,6 +44,26 @@ const registeruser = asynchandler(async (req, res, next) => {
       throw new ApiError(400, "For ISM members, please use your institutional email (@iitism.ac.in)");
     }
   }
+  let passid="ism";
+  if(ism_member==false){
+    try{
+    const data = await mongoose.connection
+          .collection("hospitality_pass")
+          .findOneAndUpdate({}, 
+            { $inc: { count: 1 } },
+            { returnDocument: 'after' })
+
+          passid=passid+data.count;
+        //   data.count++;
+        //   await data.save();
+    }
+    catch(err){
+        throw new ApiError(500,err,"Error in making passid");
+    }
+
+    // console.log(passid);
+    
+  }
   if (password.length < 8) {
     throw new ApiError(400, "Password must be at least 8 characters long");
   }
@@ -69,7 +90,8 @@ const registeruser = asynchandler(async (req, res, next) => {
     email,
     password,
     mobilenumber,
-    ism_member
+    ism_member,
+    passid
   });
 
   const createduser = await User.findById(user._id).select("-password -refreshToken");
