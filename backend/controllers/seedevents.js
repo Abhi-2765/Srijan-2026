@@ -3,6 +3,8 @@ dotenv.config();
 import connectDB from "../config/db.js";
 import { Event } from "../models/EventModel.js";
 
+// console.log(process.env.MONGODB_URI);
+
 await connectDB();
 
 const events = [
@@ -36,10 +38,10 @@ const events = [
     venue: "Penman",
     description: "Solo dance showdown highlighting power, passion, and expression.",
     date: "6th Feb",
-    prize: 30000,
+    prize: 20000,
     rulebook: "https://docs.google.com/document/d/1d__cJ4TEBhWG6PO3gaOEgje6Ue22r_c2haHW5LewcHQ/edit",
     bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png",
-    registration_link: "https://unstop.com/events/footloose-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624780"
+    registration_link: "https://unstop.com/p/footloose-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1630490"
   },
   {
     event_name: "Reflection",
@@ -47,10 +49,10 @@ const events = [
     venue: "Penman",
     description: "Duo dance competition celebrating coordination and chemistry.",
     date: "6th Feb",
-    prize: 40000,
+    prize: 30000,
     rulebook: "https://docs.google.com/document/d/1m89BAOSQUYB4W0KalyS3eZjOjRn9Jq0WfNkNyH7oWwY/edit",
     bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119455/Copy_of_ABOUT_US_tryhf2.png",
-    registration_link: "https://unstop.com/o/dQzRFt8?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
+    registration_link: "https://unstop.com/p/reflection-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1629733"
   },
   {
     event_name: "Hustle Herd",
@@ -58,10 +60,10 @@ const events = [
     venue: "Penman",
     description: "High-energy group dance performance focused on unity and rhythm.",
     date: "6th Feb",
-    prize: 50000,
+    prize: 40000,
     rulebook: "https://docs.google.com/document/d/10kEWZFACzTvxZefW4pXPTv7kzQiru-ES0hPD2IMafrE/edit",
     bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1768119474/Copy_of_ABOUT_US_1_iqgfkt.png",
-    registration_link: "https://unstop.com/events/hustle-herd-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624796"
+    registration_link: "https://unstop.com/events/hustle-herd-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1629818"
   },
 
   // ================= MUSIC =================
