@@ -45,25 +45,38 @@ const registeruser = asynchandler(async (req, res, next) => {
     }
   }
   let passid="ism";
+  // console.log(passid);
+  
   if(ism_member==false){
+    let data;
     try{
-    const data = await mongoose.connection
+      // console.log("cnt");
+    data = await mongoose.connection
           .collection("hospitality_pass")
           .findOneAndUpdate({}, 
             { $inc: { count: 1 } },
-            { returnDocument: 'after' })
-
+            {new: true, upsert: true, returnDocument: 'after' })
+            // console.log("cnt");
+            // console.log(data);
+            // console.log(data.count);
+            
+            
+            
           passid=passid+data.count;
         //   data.count++;
         //   await data.save();
     }
     catch(err){
+      // console.log(data);
+      
         throw new ApiError(500,err,"Error in making passid");
     }
 
     // console.log(passid);
     
   }
+    // console.log(passid);
+
   if (password.length < 8) {
     throw new ApiError(400, "Password must be at least 8 characters long");
   }
