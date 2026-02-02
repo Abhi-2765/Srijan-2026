@@ -3,20 +3,34 @@ import qrData from "../models/Qrmodel.js";
 
 
 
+
+
+function decode(str) {
+  const shifted = Buffer.from(str, "base64").toString("utf8");
+  let original = "";
+  for (let i = 0; i < shifted.length; i++) {
+    original += String.fromCharCode(shifted.charCodeAt(i) - 3);
+  }
+  return original;
+}
+
 export const allowentry =async (req, res) => {
-    const { email } = req.body;
+    const { emaildata } = req.body;
     try {
-        if(!email){
+        if(!emaildata){
             return res.status(400).json({ message: "Email is required" });
         }
+        let email = decode(emaildata);
+        // console.log("Decoded email:", email);
+        
         const qr = await qrData.findOne({ email });
         if (!qr) {
             return res.status(404).json({ message: "User not registered" });
         }
-        if(qr.entrystatus){
+        if(qr.entrystatus=="yes"){
             return  res.status(400).json({ message: "Already entered" });
         }
-        qr.entrystatus = true;
+        qr.entrystatus = "yes";
         await qr.save();
         res.json({ message: "Entry allowed", data: qr });
     } catch (error) {
@@ -25,19 +39,20 @@ export const allowentry =async (req, res) => {
 }
 
 export const exit =async (req, res) => {
-    const { email } = req.body;
+    const { emaildata } = req.body;
     try {
-        if(!email){
+        if(!emaildata){
             return res.status(400).json({ message: "Email is required" });
         }
+        let email = decode(emaildata);
         const qr = await qrData.findOne({ email });
         if (!qr) {
             return res.status(404).json({ message: "User not registered" });
         }
-        if(!qr.entrystatus){
+        if(qr.entrystatus !== "yes"){
             return  res.status(400).json({ message: "Already exited" });
         }
-        qr.entrystatus = false;
+        qr.entrystatus = "";
         await qr.save();
         res.json({ message: "Entry exited", data: qr });
     } catch (error) {
@@ -47,17 +62,12 @@ export const exit =async (req, res) => {
 
 export const eventend = async (req, res) => {
     try {
-        await qrData.updateMany({}, { entrystatus: false });
+        await qrData.updateMany({}, { entrystatus: "" });
         res.json({ message: "Event ended, all entry statuses reset" });
     } catch (error) {
         res.status(500).json({ message: "Error ending event", error });
     }
 };
-
-const sendqrinfomail= async(req,res)=>{
-
-}
-
 
 
 

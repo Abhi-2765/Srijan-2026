@@ -4,8 +4,8 @@ import mongoose from "mongoose";
 const qrschema = new mongoose.Schema({
     email: String,
     entrystatus: {
-        type: Boolean,
-        default: false
+        type: String,
+        default: ""
     }
 });
 

@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { allowentry, exit, eventend } from "../controllers/Qrcontroller.js";
-import { isAdmin } from "../middleware/adminMiddleware";
+import { isAdmin } from "../middleware/adminMiddleware.js";
 
 const router = Router();
 
