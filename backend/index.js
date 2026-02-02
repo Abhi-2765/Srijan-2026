@@ -12,6 +12,7 @@ import  errorHandler  from './middleware/errorMiddleware.js';
 import hospitalityrouter from './routes/hospitalityRoutes.js';
 import paymentRoutes from "./routes/paymentRoutes.js";
 import merchrouter from './routes/merchrouter.js';
+import qrrouter  from "./routes/qrRoutes.js";
 
 
 
@@ -49,6 +50,7 @@ app.use(rateLimit({
   app.use("/api/v1/hospitality", hospitalityrouter);
   app.use("/api/v1/payments", paymentRoutes);
   app.use("/api/v1/merchandise",merchrouter);
+  app.use("/api/v1/qr",qrrouter);
 
   app.use(errorHandler);
 

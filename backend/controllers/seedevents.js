@@ -21,17 +21,6 @@ const events = [
     registration_link: "https://unstop.com/events/street-reloaded-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624850"
   },
   {
-    event_name: "Street Beats",
-    event_category: "DANCE",
-    venue: "Open Air Theatre (Near Central Library)",
-    description: "High-energy crew dance battle with street styles and teamwork.",
-    date: "7th February, 2026",
-    prize: 40000,
-    rulebook: "https://docs.google.com/document/d/1VuJ1zuE7nbI-CBOXE3Xu9V19yfZdttGoHYhjSowwvsc/edit",
-    bg_image_url: "https://images.unsplash.com/photo-1698222231294-244fe4c3b1d5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    registration_link: "https://unstop.com/o/zNpcEWO?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
-  },
-  {
     event_name: "Footloose",
     event_category: "DANCE",
     venue: "GJLT",
@@ -102,7 +91,7 @@ const events = [
     registration_link: "https://unstop.com/events/paridhan-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624858"
   },
   {
-    event_name: "Mr. & Mrs. Srijan",
+    event_name: "Mr. & Ms. Srijan",
     event_category: "FASHION",
     venue: "Amber Ground",
     description: "Personality contest with talent rounds, Q&A, and fashion walk.",
@@ -134,7 +123,7 @@ const events = [
     prize: 13000,
     rulebook: "https://docs.google.com/document/d/1atAr9OnhJNkBMwl_VHu2jERp9bCpyEcB0Xpbo5zwXow/edit",
     bg_image_url: "https://images.unsplash.com/photo-1582053628662-c65b0e0544e9?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    registration_link: "https://unstop.com/o/czoa6Mp?lb=qBsTTW8d&utm_medium=Share&utm_source=harshudu1820&utm_campaign=Events"
+    registration_link: "https://unstop.com/events/frames-of-srijan-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1626808"
   },
   {
     event_name: "Online Short Film Making",
@@ -258,7 +247,7 @@ const events = [
   {
     event_name: "ISM's Got Latent",
     event_category: "COMEDY",
-    venue: "NAC Hall",
+    venue: "GJLT",
     description: "Talent showcase with humour and creativity.",
     date: "8th February, 2026",
     prize: 10000,
@@ -357,6 +346,17 @@ const events = [
     registration_link: "https://unstop.com/quiz/helm-quiz-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624818"
   },
   {
+    event_name: "Banger Voices",
+    event_category: "MISCEllANEOUS",
+    venue: "New Lecture Hall Complex",
+    description: "N/A",
+    date: "8th February, 2026",
+    prize: 10000,
+    rulebook: "https://docs.google.com/document/d/1-PLkRIJLWkHdCnTgDk0LBVFyy1yCvzjWfLNqimEuUjI/edit?usp=sharing",
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1769959665/Banger_voices_3_gzdwnz.jpg",
+    registration_link: "https://unstop.com/events/banger-voices-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1629876"
+  },
+  {
     event_name: "General Quiz",
     event_category: "LITERARY",
     venue: "New Lecture Hall Complex",
@@ -367,11 +367,22 @@ const events = [
     bg_image_url: "https://plus.unsplash.com/premium_photo-1680303237111-35809e47fcc1?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     registration_link: "https://unstop.com/quiz/general-quiz-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624784"
   },
+  {
+    event_name: "Queer Trivia",
+    event_category: "MISCEllANEOUS",
+    venue: "New Lecture Hall Complex",
+    description: "N/A",
+    date: "8th February, 2026",
+    prize: 9000,
+    rulebook: "https://docs.google.com/document/d/1NiUKdM-uATZnMhs9tNrDXrMGe8cIO9xdOw9wBWU4kyk/edit?usp=sharing",
+    bg_image_url: "https://res.cloudinary.com/dznit2e1x/image/upload/v1769960058/LGBT-flag_2x_jecqwv.png",
+    registration_link: "https://unstop.com/quiz/queer-trivia-srijan-2026-indian-institute-of-technology-indian-school-of-mines-iit-ism-dhanbad-1624886"
+  },
 
   // ================= MISC =================
   {
     event_name: "Flavours of the Globe",
-    event_category: "MISC",
+    event_category: "MISCEllANEOUS",
     venue: "Near Library",
     description: "Culinary face-off celebrating global flavours.",
     date: "7th February, 2026",

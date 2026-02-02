@@ -32,4 +32,4 @@ export const isAdmin = asynchandler(async(req, res, next) => {
         throw new ApiError(401, error?.message || "Invalid access token")
     }
     
-})
+});
