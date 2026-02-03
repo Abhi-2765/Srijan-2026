@@ -32,7 +32,7 @@ app.set("trust proxy", 1);
 
 app.use(rateLimit({
     windowMs: 2 * 60 * 1000,
-    max: 100,
+    max: 500,
     message: "Too many requests from this IP, please try again later."
   }));
   app.use(express.static("public"));
