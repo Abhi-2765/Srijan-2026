@@ -1,5 +1,4 @@
 import qrData from "../models/Qrmodel.js";
-// import bcrypt from "bcrypt";
 
 
 
