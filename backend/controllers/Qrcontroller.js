@@ -21,9 +21,14 @@ export const allowentry =async (req, res) => {
             return res.status(400).json({ message: "Email is required" });
         }
         let email = decode(emaildata);
+        let emailo=email.toLocaleLowerCase();
+        let emailt=email.toUpperCase();
         // console.log("Decoded email:", email);
+        let qr = await qrData.findOne({email: emailo });
+        if(!qr){
+            qr=await qrData.findOne({email:emailt});
+        }
         let co=true;
-        const qr = await qrData.findOne({ email });
         if (!qr) {
             return res.status(404).json({ message: "User not registered" });
         }
@@ -55,7 +60,14 @@ export const exit =async (req, res) => {
             return res.status(400).json({ message: "Email is required" });
         }
         let email = decode(emaildata);
-        const qr = await qrData.findOne({ email });
+        let emailo=email.toLocaleLowerCase();
+        let emailt=email.toUpperCase();
+        // console.log("Decoded email:", email);
+        let qr = await qrData.findOne({email: emailo });
+        if(!qr){
+            qr=await qrData.findOne({email:emailt});
+        }
+        // const qr = await qrData.findOne({ email });
         if (!qr) {
             return res.status(404).json({ message: "User not registered" });
         }
