@@ -19,7 +19,7 @@ import qrrouter  from "./routes/qrRoutes.js";
 const app = express();
 
 app.use(cors({
-  origin:process.env.CORS_ORIGIN  || process.env.CORS_ORIGINTWO,
+  origin:process.env.CORS_ORIGIN  || process.env.CORS_ORIGINTWO || process.env.CORS_ORIGINTHREE,
   credentials:true
 }));
 

@@ -1,4 +1,5 @@
 import qrData from "../models/Qrmodel.js";
+import outsidedata from "../models/Outsidemodel.js";
 
 
 
@@ -21,10 +22,20 @@ export const allowentry =async (req, res) => {
         }
         let email = decode(emaildata);
         // console.log("Decoded email:", email);
-        
+        let co=true;
         const qr = await qrData.findOne({ email });
         if (!qr) {
             return res.status(404).json({ message: "User not registered" });
+        }
+        // if(!(email.endsWith("@iitism.ac.in"))){
+        //     co=false;
+        //     const userdata= await outsidedata.findOne({email});
+        //     if(userdata){
+        //         co=true;
+        //     }
+        // }
+        if(co==false){
+            return res.status(400).json({message:"Non ISM mail, didn't paid"});
         }
         if(qr.entrystatus=="yes"){
             return  res.status(400).json({ message: "Already entered" });
