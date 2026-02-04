@@ -4,8 +4,8 @@ import { isAdmin } from "../middleware/adminMiddleware.js";
 
 const router = Router();
 
-router.post("/allow-entry",isAdmin, allowentry);
-router.post("/exit",isAdmin, exit);
-router.post("/event-end", isAdmin, eventend);
+router.post("/allow-entry", allowentry);
+router.post("/exit", exit);
+router.post("/event-end", eventend);
 
 export default router;
