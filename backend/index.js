@@ -18,9 +18,21 @@ import qrrouter  from "./routes/qrRoutes.js";
 
 const app = express();
 
+const allowedOrigins = [
+  process.env.CORS_ORIGIN,
+  process.env.CORS_ORIGINTWO,
+  process.env.CORS_ORIGINTHREE
+].filter(Boolean);
+
 app.use(cors({
-  origin:process.env.CORS_ORIGIN  || process.env.CORS_ORIGINTWO || process.env.CORS_ORIGINTHREE,
-  credentials:true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true
 }));
 
 

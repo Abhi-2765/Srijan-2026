@@ -39,9 +39,9 @@ const registeruser = asynchandler(async (req, res, next) => {
   }
 
   if(ism_member==true){
-    const ismEmailPattern = /^[a-zA-Z0-9._%+-]+@iitism\.ac\.in$/;
+    const ismEmailPattern = /^[a-zA-Z0-9._%+-]+iitism\.ac\.in$/;
     if (!ismEmailPattern.test(email)) {
-      throw new ApiError(400, "For ISM members, please use your institutional email (@iitism.ac.in)");
+      throw new ApiError(400, "For ISM members, please use your institutional email (iitism.ac.in)");
     }
   }
   let passid="ism";
