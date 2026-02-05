@@ -60,7 +60,7 @@ export const exit =async (req, res) => {
             return res.status(400).json({ message: "Email is required" });
         }
         let email = decode(emaildata);
-        let emailo=email.toLocaleLowerCase();
+        let emailo=email.toLowerCase();
         let emailt=email.toUpperCase();
         // console.log("Decoded email:", email);
         let qr = await qrData.findOne({email: emailo });
