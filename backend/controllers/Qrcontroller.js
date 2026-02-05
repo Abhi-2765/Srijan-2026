@@ -2,7 +2,10 @@ import qrData from "../models/Qrmodel.js";
 import outsidedata from "../models/Outsidemodel.js";
 
 
-
+function normalizeEmail(email) {
+  const [local, domain] = email.split("@");
+  return `${local.toUpperCase()}@${domain}`;
+}
 
 
 function decode(str) {
@@ -21,12 +24,16 @@ export const allowentry =async (req, res) => {
             return res.status(400).json({ message: "Email is required" });
         }
         let email = decode(emaildata);
-        let emailo=email.toLocaleLowerCase();
+        let emailo=email.toLowerCase();
         let emailt=email.toUpperCase();
+        let emailf=normalizeEmail(email);
         // console.log("Decoded email:", email);
         let qr = await qrData.findOne({email: emailo });
         if(!qr){
             qr=await qrData.findOne({email:emailt});
+        }
+        if(!qr){
+            qr=await qrData.findOne({email:emailf});
         }
         let co=true;
         if (!qr) {
@@ -62,10 +69,14 @@ export const exit =async (req, res) => {
         let email = decode(emaildata);
         let emailo=email.toLowerCase();
         let emailt=email.toUpperCase();
+        let emailf=normalizeEmail(email);
         // console.log("Decoded email:", email);
         let qr = await qrData.findOne({email: emailo });
         if(!qr){
             qr=await qrData.findOne({email:emailt});
+        }
+        if(!qr){
+            qr=await qrData.findOne({email:emailf});
         }
         // const qr = await qrData.findOne({ email });
         if (!qr) {
